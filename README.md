@@ -1,1 +1,1 @@
-Marketing Website for Ratio App.
+The most insightful personal finance app.
