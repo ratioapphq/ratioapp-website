@@ -2,17 +2,19 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Hero from "../components/Hero";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
     <div>
-      <p className="title">
-        <Link href="/about">
-          <a className="text-gray-500 underline">About Us.</a>
-        </Link>
-      </p>
-      <h1 className="text-3xl font-bold">Welcome to Ratio App.</h1>
-      <p clas>The most insightful personal finance app.</p>
+      <Head>
+        <title>Ratio App - The most insightful personal finance app</title>
+      </Head>
+      <Navbar />
+      <Hero />
+      <Footer />
     </div>
   );
 }
