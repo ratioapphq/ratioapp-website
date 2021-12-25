@@ -2,17 +2,18 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import logo from "../public/icon-letter-logo.svg";
 
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+// const navigation = [
+//   { name: "Product", href: "#" },
+//   { name: "Features", href: "#" },
+//   { name: "Marketplace", href: "#" },
+//   { name: "Company", href: "#" },
+// ];
 
 export default function Navbar() {
   return (
-    <div className="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
+    <div className="relative pt-6">
       <Popover>
         <nav
           className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
@@ -21,13 +22,13 @@ export default function Navbar() {
           <div className="flex items-center flex-1">
             <div className="flex items-center justify-between w-full md:w-auto">
               <a href="#">
-                <span className="sr-only">Workflow</span>
+                <span className="sr-only">Ratio App</span>
                 <Image
                   className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                  alt=""
-                  width={43.75}
-                  height={40}
+                  src={logo}
+                  alt="Ratio App Icon and Letter Logo"
+                  width={178}
+                  height={36}
                 />
               </a>
               <div className="-mr-2 flex items-center md:hidden">
@@ -37,7 +38,7 @@ export default function Navbar() {
                 </Popover.Button>
               </div>
             </div>
-            <div className="hidden md:block md:ml-10 md:space-x-10">
+            {/* <div className="hidden md:block md:ml-10 md:space-x-10">
               {navigation.map((item) => (
                 <a
                   key={item.name}
@@ -47,17 +48,15 @@ export default function Navbar() {
                   {item.name}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
           <div className="hidden md:block text-right">
-            <span className="inline-flex rounded-md shadow-md ring-1 ring-black ring-opacity-5">
-              <a
-                href="#"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
-              >
-                Log inn
-              </a>
-            </span>
+            <a
+              href="#"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-ratiogreen-400 hover:bg-indigo-700"
+            >
+              Read our personal finance blog
+            </a>
           </div>
         </nav>
 
@@ -78,11 +77,11 @@ export default function Navbar() {
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
                   <Image
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt=""
-                    width={43.75}
-                    height={40}
+                    className="h-8 w-auto sm:h-10"
+                    src={logo}
+                    alt="Ratio App Icon and Letter Logo"
+                    width={178}
+                    height={36}
                   />
                 </div>
                 <div className="-mr-2">
@@ -105,9 +104,9 @@ export default function Navbar() {
               </div>
               <a
                 href="#"
-                className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
+                className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
               >
-                Log inn
+                Read our personal finance blog
               </a>
             </div>
           </Popover.Panel>
