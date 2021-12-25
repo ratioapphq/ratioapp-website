@@ -77,7 +77,12 @@ export default function Hero() {
                 <p className="text-base font-medium text-gray-900">
                   Sign up to get early beta access.
                 </p>
-                <form action="#" method="POST" className="mt-3 sm:flex">
+                <form
+                  name="beta-signup"
+                  method="POST"
+                  className="mt-3 sm:flex"
+                  data-netlify="true"
+                >
                   <label htmlFor="email" className="sr-only">
                     Email
                   </label>
