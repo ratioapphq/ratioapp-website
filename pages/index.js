@@ -9,9 +9,7 @@ export default function Home() {
       <Head>
         <title>Ratio App - The most insightful personal finance app</title>
       </Head>
-      <Navbar />
       <Hero />
-      <Footer />
     </div>
   );
 }
