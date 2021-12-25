@@ -3,7 +3,7 @@ import heroImage from "../public/hero-image.png";
 
 export default function Hero() {
   return (
-    <div className="relative bg-gray-50 overflow-hidden">
+    <div className="relative bg-white overflow-hidden">
       <div
         className="hidden lg:block lg:absolute lg:inset-0"
         aria-hidden="true"
@@ -50,7 +50,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
+      <div className="relative pt-6 sm:pb-24 lg:pb-8">
         <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             {/* Left Section: Copy */}
@@ -103,7 +103,7 @@ export default function Hero() {
                   </button>
                 </form>
                 <p className="mt-3 text-sm text-gray-500">
-                  We care about the protection of your data. Read our
+                  We care about the protection of your data. Read our&nbsp;
                   <a href="#" className="font-medium text-gray-900 underline">
                     Privacy Policy
                   </a>
@@ -112,7 +112,7 @@ export default function Hero() {
               </div>
             </div>
             {/* Right Section: Image */}
-            <div className="relative sm:max-w-lg sm:mx-auto lg:mt-0 sm:mt-16 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+            <div className="relative sm:max-w-lg sm:mx-auto lg:mt-0 mt-12 lg:max-w-none lg:mx-0 lg:col-span-6 flex items-center">
               {/* Pattern */}
               <svg
                 className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden"
@@ -156,13 +156,13 @@ export default function Hero() {
                 />
               </svg>
               {/* iPhone Mockup */}
-              <div className="relative lg:-mt-12 mx-auto w-full lg:max-w-md">
+              <div className="relative lg:-mt-20 mx-auto lg:max-w-md">
                 <Image
-                  className="w-full"
+                  className="mx-auto"
                   src={heroImage}
                   alt=""
-                  width={308}
-                  height={636}
+                  width={253}
+                  height={524}
                 />
               </div>
             </div>
