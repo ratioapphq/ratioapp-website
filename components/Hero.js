@@ -10,7 +10,7 @@ const navigation = [
 
 export default function Hero() {
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div className="relative bg-gray-50 overflow-hidden">
       <div
         className="hidden lg:block lg:absolute lg:inset-0"
         aria-hidden="true"
@@ -97,7 +97,7 @@ export default function Hero() {
                   />
                   <button
                     type="submit"
-                    className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ratiogreen-400 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ratiogreen-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+                    className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ratiogreen-400 shadow-sm hover:bg-ratiogreen-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ratiogreen-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
                   >
                     Join BETA
                   </button>
