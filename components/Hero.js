@@ -79,10 +79,12 @@ export default function Hero() {
                 </p>
                 <form
                   name="beta-signup"
+                  action="/success"
                   method="POST"
                   className="mt-3 sm:flex"
                   data-netlify="true"
                 >
+                  <input type="hidden" name="form-name" value="beta-signup" />
                   <label htmlFor="email" className="sr-only">
                     Email
                   </label>
