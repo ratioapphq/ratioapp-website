@@ -94,6 +94,7 @@ export default function Hero() {
                     id="email"
                     className="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-ratiogreen-500 focus:border-ratiogreen-500 sm:flex-1 border-gray-300"
                     placeholder="Enter your email"
+                    required
                   />
                   <button
                     type="submit"
