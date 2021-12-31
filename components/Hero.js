@@ -1,7 +1,15 @@
 import Image from "next/image";
 import heroImage from "../public/hero-image.png";
+import { useRef, useEffect } from "react";
 
 export default function Hero() {
+  const inputElement = useRef(null);
+  useEffect(() => {
+    if (inputElement.current) {
+      inputElement.current.focus();
+    }
+  }, []);
+
   return (
     <div className="relative bg-white overflow-hidden">
       <div
@@ -82,19 +90,19 @@ export default function Hero() {
                   action="/success"
                   method="POST"
                   className="mt-3 sm:flex"
-                  data-netlify="true"
                 >
-                  <input type="hidden" name="form-name" value="beta-signup" />
                   <label htmlFor="email" className="sr-only">
                     Email
                   </label>
                   <input
+                    ref={inputElement}
                     type="email"
                     name="email"
                     id="email"
                     className="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-ratiogreen-500 focus:border-ratiogreen-500 sm:flex-1 border-gray-300"
                     placeholder="Enter your email"
                     required
+                    autoFocus
                   />
                   <button
                     type="submit"
