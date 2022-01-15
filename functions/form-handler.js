@@ -5,25 +5,26 @@ const md5 = require("md5");
 const listId = process.env.MAILCHIMP_LIST_ID;
 
 mailchimp.setConfig({
-  apikey: process.env.MAILCHIMP_API_KEY,
+  apiKey: process.env.MAILCHIMP_API_KEY,
   server: "us20",
 });
 
-const sendConfirmationEmail = async ({ email }) => {
-  console.log("Sending the email");
-
-  await mailchimp.lists.addListMember(listId, {
-    email_address: email,
-    status: "pending",
-  });
-};
-
-const checkSubscriptionStatus = async ({ email }) => {
-  console.log("Checking subscription status");
-
-  const subscriberHash = md5(email.toLowerCase());
-  await mailchimp.lists.getListMember(listId, subscriberHash);
-};
+async function getSubscriptionStatus({ email }) {
+  try {
+    // Check subscription status.
+    const subscriberHash = md5(email.toLowerCase());
+    const response = await mailchimp.lists.getListMember(
+      listId,
+      subscriberHash
+    );
+    console.log(`This user's subscription status is ${response.status}.`);
+    return response.status;
+  } catch (error) {
+    if (error.status === 404) {
+      return "404";
+    }
+  }
+}
 
 exports.handler = async (event, context) => {
   // Only allow POST
@@ -36,19 +37,16 @@ exports.handler = async (event, context) => {
     const data = JSON.parse(event.body);
 
     if (data.email) {
-      const response = await checkSubscriptionStatus(data);
-      console.log(`This user's subscription status is ${response.status}.`);
+      const subStatus = await getSubscriptionStatus(data);
 
-      if (response.status === "subscribed") {
-        return {
-          statusCode: 422,
-          body: JSON.stringify({
-            error: "Email already subscribed",
-          }),
-        };
-      } else {
+      if (subStatus === "404") {
+        console.log("we will send you email");
         // Send confirmation email
-        const sendEmailResponse = await sendConfirmationEmail(body);
+        console.log("Sending confirmation email");
+        const sendEmailResponse = await mailchimp.lists.addListMember(listId, {
+          email_address: data.email,
+          status: "pending",
+        });
         console.log(
           `Successfully added contact as an audience member. The contact's id is ${sendEmailResponse.id}.`
         );
@@ -56,6 +54,33 @@ exports.handler = async (event, context) => {
           statusCode: 200,
           body: JSON.stringify({
             message: "Confirmation email sent to contact!",
+          }),
+        };
+      } else if (subStatus === "unsubscribed") {
+        const subscriberHash = md5(data.email.toLowerCase());
+        const sendEmailResponse = await mailchimp.lists.updateListMember(
+          listId,
+          subscriberHash,
+          {
+            email_address: data.email,
+            status: "pending",
+          }
+        );
+        console.log(
+          `Successfully added contact as an audience member. The contact's id is ${sendEmailResponse.id}.`
+        );
+        return {
+          statusCode: 200,
+          body: JSON.stringify({
+            message: "Confirmation email sent to contact!",
+          }),
+        };
+      } else {
+        console.log("already exists");
+        return {
+          statusCode: 422,
+          body: JSON.stringify({
+            error: "Email already subscribed",
           }),
         };
       }
