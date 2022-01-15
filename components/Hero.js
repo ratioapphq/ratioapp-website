@@ -1,7 +1,24 @@
+import { CheckCircleIcon, XIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import heroImage from "../public/hero-image.png";
+import { useRef, useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Alert from "./Alert";
 
 export default function Hero() {
+  const router = useRouter();
+  const inputElement = useRef(null);
+
+  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [alert, setAlert] = useState({ message: "" });
+
+  useEffect(() => {
+    if (inputElement.current) {
+      inputElement.current.focus();
+    }
+  }, []);
+
   return (
     <div className="relative bg-white overflow-hidden">
       <div
@@ -69,36 +86,35 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Ratio App is an easy and secure way to monitor your financial
-                data, manage your money and get valuable insights to help you
-                make better financial decisions.
+                Ratio App is an easy and secure way to track your expenses and
+                income. Get valuable insights you can&apos;t get from your bank.
+                Make better financial decisions.
               </p>
+              {/* Sign Up Form */}
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <p className="text-base font-medium text-gray-900">
                   Sign up to get early beta access.
                 </p>
-                <form
-                  name="beta-signup"
-                  action="/success"
-                  method="POST"
-                  className="mt-3 sm:flex"
-                  data-netlify="true"
-                >
-                  <input type="hidden" name="form-name" value="beta-signup" />
+                <form onSubmit={handleSubmit} className="mt-3 sm:flex">
                   <label htmlFor="email" className="sr-only">
                     Email
                   </label>
                   <input
+                    ref={inputElement}
                     type="email"
                     name="email"
                     id="email"
                     className="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-ratiogreen-500 focus:border-ratiogreen-500 sm:flex-1 border-gray-300"
                     placeholder="Enter your email"
                     required
+                    autoFocus
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <button
                     type="submit"
-                    className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ratiogreen-400 shadow-sm hover:bg-ratiogreen-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ratiogreen-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+                    disabled={loading}
+                    className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ratiogreen-400 shadow-sm hover:bg-ratiogreen-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ratiogreen-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto disabled:opacity-70"
                   >
                     Join BETA
                   </button>
@@ -110,6 +126,7 @@ export default function Hero() {
                   </a>
                   .
                 </p>
+                {alert.message !== "" && <Alert alert={alert} />}
               </div>
             </div>
             {/* Right Section: Image */}
@@ -172,4 +189,52 @@ export default function Hero() {
       </div>
     </div>
   );
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    setAlert({ message: "" });
+    setLoading(true);
+    console.log(loading);
+
+    try {
+      // make request to lambda function here.
+      let response = await fetch("/api/form-handler", {
+        method: "POST",
+        body: JSON.stringify({ email: email }),
+      });
+
+      const json = await response.json();
+      console.log("RESPONSE JSON: ", json);
+      if (response.status === 200) {
+        setLoading(false);
+        setEmail("");
+
+        // After successful show alert.
+        setAlert({
+          type: "success",
+          message:
+            "Thank you for signing up. Check your mailbox for confirmation. Check spam if you don't see it!",
+        });
+      } else if (response.status === 422) {
+        setLoading(false);
+        setAlert({
+          type: "error",
+          message: json.error,
+        });
+      } else {
+        setLoading(false);
+        setAlert({
+          type: "error",
+          message: "Something went wrong. Please try again!",
+        });
+      }
+    } catch (error) {
+      setLoading(false);
+      setAlert({
+        type: "error",
+        message: error.message,
+      });
+    }
+  }
 }
