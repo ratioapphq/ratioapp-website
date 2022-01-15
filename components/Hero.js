@@ -11,11 +11,7 @@ export default function Hero() {
 
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
-  const [alert, setAlert] = useState({
-    type: "success",
-    message:
-      "Thank you for signing up. Check your mailbox for confirmation. Check spam if you don't see it!",
-  });
+  const [alert, setAlert] = useState({ message: "" });
 
   useEffect(() => {
     if (inputElement.current) {
@@ -196,10 +192,12 @@ export default function Hero() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    try {
-      setLoading(true);
-      console.log(loading);
 
+    setAlert({});
+    setLoading(true);
+    console.log(loading);
+
+    try {
       // make request to lambda function here.
       let response = await fetch("/api/form-handler", {
         method: "POST",
@@ -207,14 +205,30 @@ export default function Hero() {
       });
 
       const json = await response.json();
+      console.log("RESPONSE JSON: ", json);
       if (response.status === 200) {
+        setLoading(false);
         setEmail("");
+
+        // After successful show alert.
+        setAlert({
+          type: "success",
+          message:
+            "Thank you for signing up. Check your mailbox for confirmation. Check spam if you don't see it!",
+        });
+      } else {
+        setLoading(false);
+        setAlert({
+          type: "error",
+          message: "Something went wrong. Please try again!",
+        });
       }
     } catch (error) {
       setLoading(false);
+      setAlert({
+        type: "error",
+        message: error.message,
+      });
     }
-
-    // After successful navigate to thank you page.
-    router.push("/success");
   }
 }
