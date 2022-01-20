@@ -6,18 +6,11 @@ import { useRouter } from "next/router";
 import Alert from "./Alert";
 
 export default function Hero() {
-  const router = useRouter();
   const inputElement = useRef(null);
 
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [alert, setAlert] = useState({ message: "" });
-
-  useEffect(() => {
-    if (inputElement.current) {
-      inputElement.current.focus();
-    }
-  }, []);
 
   return (
     <div className="relative bg-white overflow-hidden">
@@ -87,8 +80,8 @@ export default function Hero() {
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                 Ratio App is an easy and secure way to track your expenses and
-                income. Get valuable insights you can&apos;t get from your bank.
-                Make better financial decisions.
+                income. Get valuable insights you can&apos;t get from bank
+                statements. Make better financial decisions.
               </p>
               {/* Sign Up Form */}
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
@@ -100,7 +93,6 @@ export default function Hero() {
                     Email
                   </label>
                   <input
-                    ref={inputElement}
                     type="email"
                     name="email"
                     id="email"
@@ -179,8 +171,8 @@ export default function Hero() {
                   className="mx-auto"
                   src={heroImage}
                   alt=""
-                  width={253}
-                  height={524}
+                  width={300}
+                  height={614}
                 />
               </div>
             </div>
