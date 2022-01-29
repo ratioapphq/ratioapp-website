@@ -1,13 +1,10 @@
 import { CheckCircleIcon, XIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import heroImage from "../public/hero-image.png";
-import { useRef, useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useState } from "react";
 import Alert from "./Alert";
 
 export default function Hero() {
-  const inputElement = useRef(null);
-
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [alert, setAlert] = useState({ message: "" });
@@ -182,12 +179,12 @@ export default function Hero() {
     </div>
   );
 
+  // Handle Form Submission
   async function handleSubmit(e) {
     e.preventDefault();
 
     setAlert({ message: "" });
     setLoading(true);
-    console.log(loading);
 
     try {
       // make request to lambda function here.
@@ -197,7 +194,7 @@ export default function Hero() {
       });
 
       const json = await response.json();
-      console.log("RESPONSE JSON: ", json);
+
       if (response.status === 200) {
         setLoading(false);
         setEmail("");
