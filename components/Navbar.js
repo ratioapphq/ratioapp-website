@@ -5,6 +5,8 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import logo from "../public/icon-letter-logo.svg";
 import Link from "next/link";
 
+import * as ga from "../lib/ga";
+
 // const navigation = [
 //   { name: "Product", href: "#" },
 //   { name: "Features", href: "#" },
@@ -56,6 +58,7 @@ export default function Navbar() {
           <div className="hidden md:block text-right">
             <a
               href="https://blog.ratio.app"
+              onClick={handleReadBlog}
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-ratiogreen-400 hover:bg-ratiogreen-700"
             >
               Read our personal finance blog
@@ -107,6 +110,7 @@ export default function Navbar() {
               </div> */}
               <a
                 href="https://blog.ratio.app"
+                onClick={handleReadBlog}
                 className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-ratiogreen-600 hover:bg-ratiogreen-700"
               >
                 Read our personal finance blog
@@ -117,4 +121,14 @@ export default function Navbar() {
       </Popover>
     </div>
   );
+
+  async function handleReadBlog(e) {
+    e.preventDefault();
+    ga.event({
+      action: "click",
+      params: {
+        cta: "Read our personal finance blog",
+      },
+    });
+  }
 }
