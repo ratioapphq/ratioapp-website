@@ -4,6 +4,8 @@ import heroImage from "../public/hero-image.png";
 import { useState } from "react";
 import Alert from "./Alert";
 
+import * as ga from "../lib/ga";
+
 export default function Hero() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
@@ -205,17 +207,37 @@ export default function Hero() {
           message:
             "Thank you for signing up. Check your mailbox for confirmation. Check spam if you don't see it!",
         });
+
+        // Analytics
+        ga.event({
+          action: "sign_up",
+        });
       } else if (response.status === 422) {
         setLoading(false);
         setAlert({
           type: "error",
           message: json.error,
         });
+        // Analytics
+        ga.event({
+          action: "exception",
+          params: {
+            description: json.error,
+          },
+        });
       } else {
         setLoading(false);
         setAlert({
           type: "error",
-          message: "Something went wrong. Please try again!",
+          message:
+            "Something went wrong. Please try again or contact ratioapphq@gmail.com!",
+        });
+        // Analytics
+        ga.event({
+          action: "exception",
+          params: {
+            description: error.message,
+          },
         });
       }
     } catch (error) {
@@ -223,6 +245,14 @@ export default function Hero() {
       setAlert({
         type: "error",
         message: error.message,
+      });
+
+      // Analytics
+      ga.event({
+        action: "exception",
+        params: {
+          description: error.message,
+        },
       });
     }
   }

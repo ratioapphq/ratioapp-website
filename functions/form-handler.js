@@ -20,6 +20,7 @@ async function getSubscriptionStatus({ email }) {
     console.log(`This user's subscription status is ${response.status}.`);
     return response.status;
   } catch (error) {
+    console.log(error.message);
     if (error.status === 404) {
       return "404";
     }
@@ -75,13 +76,18 @@ exports.handler = async (event, context) => {
             message: "Confirmation email sent to contact!",
           }),
         };
-      } else {
-        console.log("already exists");
+      } else if (subStatus === "subscribed") {
         return {
           statusCode: 422,
           body: JSON.stringify({
             error: "Email already subscribed",
           }),
+        };
+      } else {
+        console.log("Subscription Status:", subStatus);
+        return {
+          statusCode: 500,
+          body: JSON.stringify({ error: "Something went wrong!" }),
         };
       }
     } else {
