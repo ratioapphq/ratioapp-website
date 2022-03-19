@@ -130,5 +130,7 @@ export default function Navbar() {
         cta: "Read our personal finance blog",
       },
     });
+    window.location.href =
+      "https://blog.ratio.app?utm_source=ratioappwebsite&utm_medium=main_nav&utm_campaign=external_website";
   }
 }
