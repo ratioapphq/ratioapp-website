@@ -1,63 +1,61 @@
 /* This example requires Tailwind CSS v2.0+ */
 import {
-  ChatAltIcon,
-  DocumentReportIcon,
-  HeartIcon,
-  InboxIcon,
-  PencilAltIcon,
-  ReplyIcon,
-  TrashIcon,
-  UsersIcon,
+  SwitchVerticalIcon,
+  SearchIcon,
+  RefreshIcon,
+  ChartBarIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  ViewGridIcon,
+  ZoomInIcon,
 } from "@heroicons/react/outline";
 
 const features = [
   {
-    name: "Unlimited Inboxes",
+    name: "Track expenses & income",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: InboxIcon,
+      "Add rich information to your transactions with notes, transaction type and payment type.",
+    icon: SwitchVerticalIcon,
   },
   {
-    name: "Manage Team Members",
+    name: "Search your spendings",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: UsersIcon,
+      "Find past purchases and bill payments no matter how long it has been.",
+    icon: SearchIcon,
   },
   {
-    name: "Spam Report",
+    name: "Categorise everything",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: TrashIcon,
+      "Comprehensive list of categories to organise your spendings so that you know exactly where your money is going.",
+    icon: ViewGridIcon,
   },
   {
-    name: "Compose in Markdown",
+    name: "Detailed Insights",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: PencilAltIcon,
+      "View spending patterns over any period of time. Get detailed insights so that you can make better financial decisions.",
+    icon: ChartBarIcon,
   },
   {
-    name: "Team Reporting",
+    name: "Syncing",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: DocumentReportIcon,
+      "Sync across your devices. Your data is securely backed up in the cloud.",
+    icon: RefreshIcon,
   },
   {
-    name: "Saved Replies",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: ReplyIcon,
+    name: "Local currencies",
+    description: "Save and view transactions in your local currency format.",
+    icon: CurrencyDollarIcon,
   },
   {
-    name: "Email Commenting",
+    name: "Privacy & Security",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: ChatAltIcon,
+      "Secure your app with biometrics. Your data is protected with encryption on the remote server.",
+    icon: ShieldCheckIcon,
   },
   {
-    name: "Connect with Customers",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: HeartIcon,
+    name: "Accessibility",
+    description: "Easy on the eyes with bold text and dark mode support.",
+    icon: ZoomInIcon,
   },
 ];
 
@@ -66,11 +64,11 @@ export default function Features() {
     <div className="bg-gray-100">
       <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
         <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">
-          Inbox support built for efficiency
+          Become financially responsible
         </h2>
         <p className="mt-4 max-w-3xl text-lg text-gray-500">
-          Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et
-          magna sit morbi lobortis. Blandit aliquam sit nisl euismod mattis in.
+          Take full control of your money with easy and secure expense tracking
+          and specific insights to help you save money.
         </p>
         <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
           {features.map((feature) => (
