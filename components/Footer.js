@@ -1,3 +1,5 @@
+import { MailIcon } from "@heroicons/react/outline";
+
 const navigation = [
   {
     name: "Twitter",
@@ -10,7 +12,7 @@ const navigation = [
   },
   {
     name: "Facebook",
-    href: "https://web.facebook.com/ratioapp",
+    href: "https://web.facebook.com/ratioapphq",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -41,6 +43,16 @@ export default function Footer() {
     <footer className="bg-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
+          <a
+            href="mailto:hello@ratio.app"
+            className="text-gray-400 hover:text-gray-500"
+          >
+            <MailIcon
+              className="flex-shrink-0 h-6 w-6 text-gray-400"
+              aria-hidden="true"
+            />
+            <span className="sr-only">Mail</span>
+          </a>
           {navigation.map((item) => (
             <a
               key={item.name}
