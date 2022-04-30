@@ -26,7 +26,7 @@ const features = [
   {
     name: "Categorise everything",
     description:
-      "Comprehensive list of categories to organise your spendings so that you know exactly where your money is going.",
+      "Comprehensive list of categories to organise transactions so that you know exactly where your money is going.",
     icon: ViewGridIcon,
   },
   {
@@ -38,7 +38,7 @@ const features = [
   {
     name: "Syncing",
     description:
-      "Sync across your devices. Your data is securely backed up in the cloud.",
+      "Sync data across multiple devices. Your data is securely backed up in the cloud.",
     icon: RefreshIcon,
   },
   {
