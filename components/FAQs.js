@@ -3,11 +3,24 @@ import { ChevronDownIcon } from "@heroicons/react/outline";
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What is Ratio App?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Ratio App provides an easy and secure way to track the most important aspects of your finances and tools to unlock the most valuable insights, so that you can make healthy financial choices.",
   },
-  // More questions...
+  {
+    question: "Who can use it?",
+    answer: "Ratio App is available to anyone, anywhere in the world.",
+  },
+  {
+    question: "Where can I get it?",
+    answer:
+      "You can download Ratio App on the App store and start taking control of your finances.",
+  },
+  {
+    question: "How safe is my data?",
+    answer:
+      "Your financial data is private to you, stored securely on your device and backed up with encryption in the cloud so that you can recover the data on any other device for whatever reason. Read more about privacy and security https://ratio.app/privacy.",
+  },
 ];
 
 function classNames(...classes) {
