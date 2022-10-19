@@ -1,8 +1,7 @@
 import Head from "next/head";
+import FAQs from "../components/FAQs";
 import Features from "../components/Features";
-import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -12,6 +11,7 @@ export default function Home() {
       </Head>
       <Hero />
       <Features />
+      <FAQs />
     </div>
   );
 }
