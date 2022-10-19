@@ -12,6 +12,7 @@ export default function Home() {
       <Hero />
       <Features />
       <FAQs />
+      {/* Another newsletter component here for them to sign up for updates. */}
     </div>
   );
 }
