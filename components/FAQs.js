@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "What is Ratio App?",
     answer:
-      "Ratio App provides an easy and secure way to track the most important aspects of your finances and tools to unlock the most valuable insights, so that you can make healthy financial choices.",
+      "Ratio App provides an easy and secure way to track the most important aspects of your finances and tools to unlock the most valuable insights, so that you can make healthy financial decisions.",
   },
   {
     question: "Who can use it?",

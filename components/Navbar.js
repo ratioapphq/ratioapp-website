@@ -16,7 +16,7 @@ import * as ga from "../lib/ga";
 
 export default function Navbar() {
   return (
-    <div className="relative py-6">
+    <div className="relative py-6 bg-white">
       <Popover>
         <nav
           className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
