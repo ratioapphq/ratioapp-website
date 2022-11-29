@@ -18,18 +18,21 @@ export default function NotFound() {
               </p>
             </div>
             <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
+            <Link href="/">
               <a
-                href="/"
                 className="inline-flex items-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               >
                 Go back home
               </a>
+              </Link>
+              <Link href="/">
               <a
                 href="mailto:hello@ratio.app"
                 className="inline-flex items-center rounded-md border border-transparent bg-green-100 px-4 py-2 text-sm font-medium text-green-700 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               >
                 Contact support
               </a>
+              </Link>
             </div>
           </div>
         </main>
