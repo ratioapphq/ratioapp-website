@@ -16,7 +16,7 @@ import * as ga from "../lib/ga";
 
 export default function Navbar() {
   return (
-    <div className="relative py-6">
+    <div className="relative py-6 bg-white">
       <Popover>
         <nav
           className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
@@ -61,7 +61,7 @@ export default function Navbar() {
               onClick={handleReadBlog}
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-ratiogreen-400 hover:bg-ratiogreen-700"
             >
-              Read our personal finance blog
+              Follow our blog
             </a>
           </div>
         </nav>

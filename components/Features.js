@@ -61,14 +61,14 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">
-          Become financially responsible
+        <h2 className="text-5xl font-extrabold text-gray-900 tracking-tight">
+          Start building healthier financial habits
         </h2>
         <p className="mt-4 max-w-3xl text-lg text-gray-500">
           Take full control of your money with easy and secure expense tracking
-          and specific insights to help you save money.
+          and specific insights to help you build great financial habits that would improve your overall financial health.
         </p>
         <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
           {features.map((feature) => (
