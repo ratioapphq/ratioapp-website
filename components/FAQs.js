@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Where can I get it?",
     answer:
-      "You can download Ratio App on the App store and start taking control of your finances.",
+      "Ratio App is currently in BETA phase, you can drop your email in the form above to get early access before we release it to the public.",
   },
   {
     question: "How safe is my data?",
