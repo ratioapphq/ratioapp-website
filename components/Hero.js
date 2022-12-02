@@ -83,14 +83,12 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Ratio App is an easy and secure way to track your expenses and
-                income. Get valuable insights you can&apos;t get from bank
-                statements. Make better financial decisions.
+                Ratio App is an easy and secure way to track your finances and build healthy financial habits. Unlock the most valuable insights from your financial data so that you can make better financial decisions.
               </p>
               {/* Sign Up Form */}
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <p className="text-base font-medium text-gray-900">
-                  Sign up to get early beta access.
+                  Join our waitlist to receive early access.
                 </p>
                 <form onSubmit={handleSubmit} className="mt-3 sm:flex">
                   <label htmlFor="email" className="sr-only">
@@ -111,12 +109,12 @@ export default function Hero() {
                     disabled={loading}
                     className="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ratiogreen-400 shadow-sm hover:bg-ratiogreen-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ratiogreen-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto disabled:opacity-70"
                   >
-                    Join BETA
+                    Get early access
                   </button>
                 </form>
                 <p className="mt-3 text-sm text-gray-500">
                   We care about the protection of your data. Read our&nbsp;
-                  <a href="/privacy-policy" className="font-medium text-gray-900 underline">
+                  <a href="/privacy" className="font-medium text-gray-900 underline">
                     Privacy Policy
                   </a>
                   .

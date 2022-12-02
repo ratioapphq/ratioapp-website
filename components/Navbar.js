@@ -113,7 +113,7 @@ export default function Navbar() {
                 onClick={handleReadBlog}
                 className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-ratiogreen-600 hover:bg-ratiogreen-700"
               >
-                Read our personal finance blog
+                Follow our blog
               </a>
             </div>
           </Popover.Panel>
