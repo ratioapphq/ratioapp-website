@@ -115,7 +115,7 @@ export default function Hero() {
                 </form>
                 <p className="mt-3 text-sm text-gray-500">
                   We care about the protection of your data. Read our&nbsp;
-                  <Link href="/privacy">
+                  <Link href="/privacy" passHref>
                     <span className="font-medium text-gray-900 underline">Privacy Policy</span>
                   </Link>
                   .

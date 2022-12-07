@@ -44,7 +44,7 @@ export default function TermsOfService() {
                     <p className="my-4"><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
                 </li>
                 <li>
-                    <p><strong>Website</strong> refers to Ratio App's web page, accessible from <a className="text-blue-600 underline" href="https://www.ratio.app" rel="external nofollow noopener" target="_blank">https://www.ratio.app</a></p>
+                    <p><strong>Website</strong> refers to Ratio App's web page, accessible from <a className="text-blue-600 underline" href="https://www.ratio.app" rel="external nofollow noopener noreferrer" target="_blank">https://www.ratio.app</a></p>
                 </li>
                 <li>
                     <p className="my-4"><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
