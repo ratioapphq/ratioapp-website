@@ -2,7 +2,7 @@ export default function TermsOfService() {
     return (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8">
             <h1 className="text-4xl font-bold my-6">Terms and Conditions</h1>
-            <p className="my-4">Last updated: December 01, 2022</p>
+            <p className="my-4">Last updated: December 07, 2022</p>
             <p className="my-4">Please read these terms and conditions carefully before using Our Service.</p>
             <h1 className="text-4xl font-bold my-6">Interpretation and Definitions</h1>
             <h2 className="text-3xl font-bold my-6">Interpretation</h2>
@@ -44,7 +44,7 @@ export default function TermsOfService() {
                     <p className="my-4"><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
                 </li>
                 <li>
-                    <p><strong>Website</strong> refers to Ratio App, accessible from <a className="text-blue-600 underline" href="https://www.ratio.app" rel="external nofollow noopener" target="_blank">https://www.ratio.app</a></p>
+                    <p><strong>Website</strong> refers to Ratio App's web page, accessible from <a className="text-blue-600 underline" href="https://www.ratio.app" rel="external nofollow noopener" target="_blank">https://www.ratio.app</a></p>
                 </li>
                 <li>
                     <p className="my-4"><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
@@ -54,7 +54,7 @@ export default function TermsOfService() {
             <p className="my-4">These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.</p>
             <p className="my-4">Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.</p>
             <p className="my-4">By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.</p>
-            <p className="my-4">You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.</p>
+            {/* <p className="my-4">You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.</p> */}
             <p className="my-4">Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.</p>
             <h1  className="text-4xl font-bold my-6">User Accounts</h1>
             <p className="my-4">When You create an account with Us, You must provide Us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of Your account on Our Service.</p>

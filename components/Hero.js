@@ -4,6 +4,7 @@ import Image from "next/image";
 import heroImage from "../public/hero-image.png";
 import { useState } from "react";
 import Alert from "./Alert";
+import Link from "next/link";
 
 import * as ga from "../lib/ga";
 
@@ -114,9 +115,9 @@ export default function Hero() {
                 </form>
                 <p className="mt-3 text-sm text-gray-500">
                   We care about the protection of your data. Read our&nbsp;
-                  <a href="/privacy" className="font-medium text-gray-900 underline">
-                    Privacy Policy
-                  </a>
+                  <Link href="/privacy">
+                    <span className="font-medium text-gray-900 underline">Privacy Policy</span>
+                  </Link>
                   .
                 </p>
                 {alert.message !== "" && <Alert alert={alert} />}
