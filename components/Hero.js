@@ -219,7 +219,7 @@ export default function Hero() {
         setLoading(false)
         setAlert({
           type: "error",
-          message: "Your subscription is pending confirmation. Please check your inbox for a confirmation button. Check your spam folder if necessary."
+          message: "Your subscription is pending confirmation. Please check your inbox for a confirmation mail from Ratio App. Check your spam folder if necessary."
         })
       } else if (response.status === 422) {
         setLoading(false);
