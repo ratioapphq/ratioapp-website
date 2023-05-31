@@ -215,6 +215,12 @@ export default function Hero() {
         ga.event({
           action: "sign_up",
         });
+      } else if (response.status === 401) {
+        setLoading(false)
+        setAlert({
+          type: "error",
+          message: "Your subscription is pending confirmation. Please check your inbox for a confirmation button. Check your spam folder if necessary."
+        })
       } else if (response.status === 422) {
         setLoading(false);
         setAlert({

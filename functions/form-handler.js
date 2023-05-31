@@ -59,9 +59,9 @@ exports.handler = async (event, context) => {
         };
       } else if (subStatus === "pending") {
         return {
-          statusCode: 200,
+          statusCode: 401,
           body: JSON.stringify({
-            message: "Your subscription is pending confirmation. Please check your inbox for a confirmation button. Check your spam folder if necessary.",
+            error: "Email is pending confirmation",
           }),
         };
       } else if (subStatus === "unsubscribed") {
