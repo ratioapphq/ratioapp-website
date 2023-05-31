@@ -208,7 +208,7 @@ export default function Hero() {
         setAlert({
           type: "success",
           message:
-            "Thank you for signing up. Check your mailbox for confirmation. Check spam if you don't see it!",
+            "Thank you for signing up. Check your mailbox for a confirmation mail from Ratio App. Check spam if you don't see it!",
         });
 
         // Analytics
