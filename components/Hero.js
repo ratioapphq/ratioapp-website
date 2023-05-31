@@ -233,7 +233,7 @@ export default function Hero() {
         setAlert({
           type: "error",
           message:
-            "Something went wrong. Please try again or contact ratioapphq@gmail.com!",
+            "Something went wrong. Please try again or contact hello@ratio.app!",
         });
         // Analytics
         ga.event({
@@ -247,14 +247,14 @@ export default function Hero() {
       setLoading(false);
       setAlert({
         type: "error",
-        message: error.message,
+        message: error.message ?? "Something went wrong. Please try again or contact hello@ratio.app!",
       });
 
       // Analytics
       ga.event({
         action: "exception",
         params: {
-          description: error.message,
+          description: error.message ?? "500 error",
         },
       });
     }

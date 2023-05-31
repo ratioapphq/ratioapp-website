@@ -57,6 +57,13 @@ exports.handler = async (event, context) => {
             message: "Confirmation email sent to contact!",
           }),
         };
+      } else if (subStatus === "pending") {
+        return {
+          statusCode: 200,
+          body: JSON.stringify({
+            message: "Your subscription is pending confirmation. Please check your inbox for a confirmation button. Check your spam folder if necessary.",
+          }),
+        };
       } else if (subStatus === "unsubscribed") {
         const subscriberHash = md5(data.email.toLowerCase());
         const sendEmailResponse = await mailchimp.lists.updateListMember(
