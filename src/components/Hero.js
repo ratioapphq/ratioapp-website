@@ -7,7 +7,7 @@ import Alert from "./Alert";
 import Link from "next/link";
 
 import clsx from 'clsx'
-import * as ga from "../lib/ga";
+import * as ga from "../../lib/ga";
 import { AppStoreLink } from "./AppStoreLink";
 import { PlayStoreLink } from "./PlayStoreLink";
 import logoBbc from './images/logos/bbc.svg'
