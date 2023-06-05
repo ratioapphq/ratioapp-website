@@ -1,6 +1,4 @@
 import Head from "next/head";
-import FAQs from "../components/FAQs";
-import Features from "../components/Features";
 import Hero from "../components/Hero";
 
 export default function Home() {
@@ -10,8 +8,7 @@ export default function Home() {
         <title>Ratio App - The most insightful personal finance app</title>
       </Head>
       <Hero />
-      <Features />
-      <FAQs />
+      {/* <FAQs /> */}
       {/* Another newsletter component here for them to sign up for updates. */}
     </div>
   );
