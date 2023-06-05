@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Button } from './Button'
 import { Container } from './Container'
 import { NavLinks } from './NavLinks'
-import logo from "./images/icon-letter-logo.svg";
+import logo from "@/images/icon-letter-logo.svg"
 
 function MenuIcon(props) {
   return (

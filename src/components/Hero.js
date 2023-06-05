@@ -1,23 +1,23 @@
 import { CheckCircleIcon, XIcon } from "@heroicons/react/solid";
 import { DeviceMobileIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-import heroImage from "./images/hero-image.png";
+import heroImage from "@/images/hero-image.png";
 import { useState } from "react";
 import Alert from "./Alert";
 import Link from "next/link";
 
 import clsx from 'clsx'
 import * as ga from "../../lib/ga";
-import { AppStoreLink } from "./AppStoreLink";
-import { PlayStoreLink } from "./PlayStoreLink";
-import logoBbc from './images/logos/bbc.svg'
-import logoCbs from './images/logos/cbs.svg'
-import logoCnn from './images/logos/cnn.svg'
-import logoFastCompany from './images/logos/fast-company.svg'
-import logoForbes from './images/logos/forbes.svg'
-import logoHuffpost from './images/logos/huffpost.svg'
-import logoTechcrunch from './images/logos/techcrunch.svg'
-import logoWired from './images/logos/wired.svg'
+import { AppStoreLink } from "@/components/AppStoreLink";
+import { PlayStoreLink } from "@/components/PlayStoreLink";
+import logoBbc from '@/images/logos/bbc.svg'
+import logoCbs from '@/images/logos/cbs.svg'
+import logoCnn from '@/images/logos/cnn.svg'
+import logoFastCompany from '@/images/logos/fast-company.svg'
+import logoForbes from '@/images/logos/forbes.svg'
+import logoHuffpost from '@/images/logos/huffpost.svg'
+import logoTechcrunch from '@/images/logos/techcrunch.svg'
+import logoWired from '@/images/logos/wired.svg'
 
 export default function Hero() {
   const [loading, setLoading] = useState(false);
