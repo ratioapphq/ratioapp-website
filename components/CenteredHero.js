@@ -6,7 +6,7 @@ import { useState } from "react";
 import Alert from "./Alert";
 import Link from "next/link";
 
-import * as ga from "../lib/ga";
+import * as ga from "../../lib/ga";
 
 export default function CenteredHero() {
   const [loading, setLoading] = useState(false);

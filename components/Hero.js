@@ -1,14 +1,23 @@
 import { CheckCircleIcon, XIcon } from "@heroicons/react/solid";
 import { DeviceMobileIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-import heroImage from "../public/hero-image.png";
+import heroImage from "./images/hero-image.png";
 import { useState } from "react";
 import Alert from "./Alert";
 import Link from "next/link";
 
+import clsx from 'clsx'
 import * as ga from "../lib/ga";
 import { AppStoreLink } from "./AppStoreLink";
 import { PlayStoreLink } from "./PlayStoreLink";
+import logoBbc from './images/logos/bbc.svg'
+import logoCbs from './images/logos/cbs.svg'
+import logoCnn from './images/logos/cnn.svg'
+import logoFastCompany from './images/logos/fast-company.svg'
+import logoForbes from './images/logos/forbes.svg'
+import logoHuffpost from './images/logos/huffpost.svg'
+import logoTechcrunch from './images/logos/techcrunch.svg'
+import logoWired from './images/logos/wired.svg'
 
 export default function Hero() {
   const [loading, setLoading] = useState(false);
@@ -37,12 +46,36 @@ export default function Hero() {
                   </span>
                 </span>
               </h1>
-              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Ratio App is an easy and secure way to track your finances and build healthy financial habits. Unlock the most valuable insights from your financial data so that you can make better financial decisions.
+              <p className="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                Ratio App lets you see your finances in a whole new light. It analyses your spending patterns to give you personalised insights and tips. Whether you want to pay off debt, save for a vacation, or just live more comfortably, Ratio App helps you make the best financial decisions for your lifestyle.
               </p>
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
                 <AppStoreLink />
                 <PlayStoreLink />
+              </div>
+              <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
+                <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
+                  As featured in
+                </p>
+                <ul
+                  role="list"
+                  className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-10 gap-y-8 lg:mx-0 lg:justify-start"
+                >
+                  {[
+                    ['Forbes', logoForbes],
+                    ['TechCrunch', logoTechcrunch],
+                    ['Wired', logoWired],
+                    ['CNN', logoCnn, 'hidden xl:block'],
+                    ['BBC', logoBbc],
+                    ['CBS', logoCbs],
+                    ['Fast Company', logoFastCompany],
+                    ['HuffPost', logoHuffpost, 'hidden xl:block'],
+                  ].map(([name, logo, className]) => (
+                    <li key={name} className={clsx('flex', className)}>
+                      <Image src={logo} alt={name} className="h-8" unoptimized />
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
             {/* Right Section: Image */}
