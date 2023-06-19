@@ -109,7 +109,7 @@ export default function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="#features">
+                            {/* <MobileNavLink href="#features">
                               Features
                             </MobileNavLink>
                             <MobileNavLink href="#reviews">
@@ -118,10 +118,10 @@ export default function Header() {
                             <MobileNavLink href="#pricing">
                               Pricing
                             </MobileNavLink>
-                            <MobileNavLink href="#faqs">FAQs</MobileNavLink>
+                            <MobileNavLink href="#faqs">FAQs</MobileNavLink> */}
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
-                            <Button href="#">Download the app</Button>
+                            <Button href="https://apps.apple.com/app/ratio-app/id1632361347">Download the app</Button>
                           </div>
                         </Popover.Panel>
                       </>
@@ -130,7 +130,7 @@ export default function Header() {
                 </>
               )}
             </Popover>
-            <Button href="#" className="hidden lg:block">
+            <Button href="https://apps.apple.com/app/ratio-app/id1632361347" className="hidden lg:block">
               Download
             </Button>
           </div>

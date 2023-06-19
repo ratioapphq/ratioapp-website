@@ -50,7 +50,7 @@ export default function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <AppStoreLink />
-              <PlayStoreLink />
+              {/* <PlayStoreLink /> */}
             </div>
           </div>
           {/* Right Section: Image */}
@@ -68,7 +68,7 @@ export default function Hero() {
             </div>
           </div>
           {/* In the press */}
-          <div className="relative -mt-12 lg:col-span-7 lg:mt-0 xl:col-span-6">
+          {/* <div className="relative -mt-12 lg:col-span-7 lg:mt-0 xl:col-span-6">
             <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
               As featured in
             </p>
@@ -91,7 +91,7 @@ export default function Hero() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>
