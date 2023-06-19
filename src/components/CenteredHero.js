@@ -6,9 +6,9 @@ import { useState } from "react";
 import Alert from "./Alert";
 import Link from "next/link";
 
-import * as ga from "../lib/ga";
+import * as ga from "../../lib/ga";
 
-export default function Hero() {
+export default function CenteredHero() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [alert, setAlert] = useState({ message: "" });
@@ -76,10 +76,10 @@ export default function Hero() {
                 </span>
                 <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
                   <span className="block text-gray-900">
-                    Designed to help you
+                    Build healthier
                   </span>
                   <span className="block text-gray-900">
-                    become financially responsible.
+                    financial habits.
                   </span>
                 </span>
               </h1>

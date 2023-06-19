@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import Layout from "../components/Layout";
-import "../styles/globals.css";
+import "../styles/globals.css"
 
-import * as ga from "../lib/ga";
+import * as ga from "../../lib/ga";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
