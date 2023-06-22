@@ -77,7 +77,7 @@ function QrCodeBorder(props) {
   )
 }
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="border-t border-gray-200">
       <Container>

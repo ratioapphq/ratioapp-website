@@ -1,6 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
-import { Container } from './Container';
+import { Container } from '@/components/Container';
 
 const faqs = [
     {
@@ -24,7 +24,7 @@ const faqs = [
     },
 ];
 
-export default function FAQs() {
+export function FAQs() {
     return (
         <section
             id="faqs"

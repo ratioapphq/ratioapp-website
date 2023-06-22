@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Hero from "@/components/Hero";
-import FAQs from "@/components/FAQs";
-import Features from "@/components/Features";
+import { Hero } from "@/components/Hero";
+import { FAQs } from "@/components/FAQs";
+import { Features } from "@/components/Features";
 
 export default function Home() {
   return (

@@ -3,7 +3,7 @@ import { DeviceMobileIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import heroImage from "@/images/hero-image.png";
 import { useState } from "react";
-import Alert from "./Alert";
+import { Alert } from "@/components/Alert";
 import Link from "next/link";
 
 import clsx from 'clsx'
@@ -20,7 +20,7 @@ import logoHuffpost from '@/images/logos/huffpost.svg'
 import logoTechcrunch from '@/images/logos/techcrunch.svg'
 import logoWired from '@/images/logos/wired.svg'
 
-export default function Hero() {
+export function Hero() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [alert, setAlert] = useState({ message: "" });

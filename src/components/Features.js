@@ -59,7 +59,7 @@ const features = [
   },
 ];
 
-export default function Features() {
+export function Features() {
   return (
     <div className="bg-white border-t border-gray-200">
         <Container>

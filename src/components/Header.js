@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { Popover } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-import { Button } from './Button'
-import { Container } from './Container'
-import { NavLinks } from './NavLinks'
+import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { NavLinks } from '@/components/NavLinks'
 import logo from "@/images/icon-letter-logo.svg"
 
 function MenuIcon(props) {
@@ -47,7 +47,7 @@ function MobileNavLink({ children, ...props }) {
   )
 }
 
-export default function Header() {
+export function Header() {
   return (
     <header>
       <nav>
