@@ -3,12 +3,12 @@ import { DeviceMobileIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import heroImage from "../public/hero-image.png";
 import { useState } from "react";
-import Alert from "./Alert";
+import { Alert } from "@/components/Alert";
 import Link from "next/link";
 
 import * as ga from "../../lib/ga";
 
-export default function CenteredHero() {
+export function CenteredHero() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [alert, setAlert] = useState({ message: "" });

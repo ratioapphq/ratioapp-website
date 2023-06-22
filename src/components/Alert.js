@@ -2,7 +2,7 @@
 import { CheckCircleIcon, XIcon } from "@heroicons/react/solid";
 import { XCircleIcon } from "@heroicons/react/solid";
 
-export default function Alert(props) {
+export function Alert(props) {
   const message = props.alert.message;
   const type = props.alert.type;
 
