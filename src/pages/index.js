@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Ratio App - The most insightful personal finance app</title>
+        <title>Ratio App - Expense tracker and budgeting for iOS</title>
       </Head>
       <Hero />
       <Features />
