@@ -10,6 +10,8 @@ import qrCode from '@/images/qr-code.svg'
 const navigation = {
   main: [
     { name: 'Blog', href: 'https://blog.ratio.app' },
+    { name: 'Changelog', href: 'https://ratioapp.canny.io/changelog' },
+    { name: 'Send feedback', href: 'https://ratioapp.canny.io/' },
     { name: 'Terms', href: '/terms' },
     { name: 'Privacy', href: '/privacy' },
   ],
