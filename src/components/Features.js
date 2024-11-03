@@ -64,7 +64,7 @@ export function Features() {
     <div className="bg-white border-t border-gray-200">
         <Container>
       <div className="max-w-4xl mx-auto py-16 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24">
-        <h2 className="text-5xl font-extrabold text-gray-900 tracking-tight">
+        <h2 className="text-5xl font-extrabold text-gray-800 tracking-tight">
             <span>
                 Designed to help you
                 <br />

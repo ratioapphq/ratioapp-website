@@ -55,11 +55,11 @@ export function Header() {
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
               <div>
-                <span className="sr-only">Ratio App</span>
+                <span className="sr-only">Ratio Money</span>
                 <Image
                   className="h-8 w-auto sm:h-10"
                   src={logo}
-                  alt="Ratio App Icon and Letter Logo"
+                  alt="Ratio Money Icon and Letter Logo"
                   width={180}
                   height={40}
                 />

@@ -2,7 +2,7 @@ export default function TermsOfService() {
     return (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8">
             <h1 className="text-4xl font-bold my-6">Terms and Conditions</h1>
-            <p className="my-4">Last updated: December 07, 2022</p>
+            <p className="my-4">Last updated: November 03, 2024</p>
             <p className="my-4">Please read these terms and conditions carefully before using Our Service.</p>
             <h1 className="text-4xl font-bold my-6">Interpretation and Definitions</h1>
             <h2 className="text-3xl font-bold my-6">Interpretation</h2>
@@ -11,7 +11,7 @@ export default function TermsOfService() {
             <p className="my-4">For the purposes of these Terms and Conditions:</p>
             <ul className="list-disc my-4 pl-10">
                 <li>
-                    <p className="my-4"><strong>Application</strong> means the software program provided by the Company downloaded by You on any electronic device, named Ratio App</p>
+                    <p className="my-4"><strong>Application</strong> means the software program provided by the Company downloaded by You on any electronic device, named Ratio Money</p>
                 </li>
                 <li>
                     <p className="my-4"><strong>Application Store</strong> means the digital distribution service operated and developed by Apple Inc. (Apple App Store) or Google Inc. (Google Play Store) in which the Application has been downloaded.</p>
@@ -44,7 +44,7 @@ export default function TermsOfService() {
                     <p className="my-4"><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
                 </li>
                 <li>
-                    <p><strong>Website</strong> refers to Ratio App's web page, accessible from <a className="text-blue-600 underline" href="https://www.ratio.app" rel="external nofollow noopener noreferrer" target="_blank">https://www.ratio.app</a></p>
+                    <p><strong>Website</strong> refers to Ratio Money's web page, accessible from <a className="text-blue-600 underline" href="https://www.ratiomoney.app" rel="external nofollow noopener noreferrer" target="_blank">https://www.ratiomoney.app</a></p>
                 </li>
                 <li>
                     <p className="my-4"><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
@@ -104,7 +104,7 @@ export default function TermsOfService() {
             <h1 className="text-4xl font-bold my-6">Contact Us</h1>
             <p className="my-4">If you have any questions about these Terms and Conditions, You can contact us:</p>
             <ul className="list-disc my-4 pl-10">
-                <li>By email: hello@ratio.app</li>
+                <li>By email: hello@ratiomoney.app</li>
             </ul>
         </div>
     );

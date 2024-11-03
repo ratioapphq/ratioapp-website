@@ -31,7 +31,7 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           {/* Left Section: Copy */}
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="text-ratiogreen-700">
+            <h1 className="text-gray-800">
               <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-7xl">
                 <span className="block">
                   Build healthier
@@ -41,7 +41,7 @@ export function Hero() {
               </span>
             </h1>
             <p className="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl text-gray-600">
-              Ratio App lets you see your finances in a whole new light. It analyses your spending patterns to give you personalised insights and tips. Whether you want to pay off debt, save for a vacation, or just live more comfortably, Ratio App helps you make the best financial decisions for your lifestyle.
+              Ratio Money lets you see your finances in a whole new light. It analyses your spending patterns to give you personalised insights and tips. Whether you want to pay off debt, save for a vacation, or just live more comfortably, Ratio Money helps you make the best financial decisions for your lifestyle.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <AppStoreLink />
@@ -116,7 +116,7 @@ export function Hero() {
         setAlert({
           type: "success",
           message:
-            "Thank you for signing up. Check your mailbox for a confirmation mail from Ratio App. Check spam if you don't see it!",
+            "Thank you for signing up. Check your mailbox for a confirmation mail from Ratio Money. Check spam if you don't see it!",
         });
 
         // Analytics
@@ -127,7 +127,7 @@ export function Hero() {
         setLoading(false)
         setAlert({
           type: "error",
-          message: "Your subscription is pending confirmation. Please check your inbox for a confirmation mail from Ratio App. Check your spam folder if necessary."
+          message: "Your subscription is pending confirmation. Please check your inbox for a confirmation mail from Ratio Money. Check your spam folder if necessary."
         })
       } else if (response.status === 422) {
         setLoading(false);

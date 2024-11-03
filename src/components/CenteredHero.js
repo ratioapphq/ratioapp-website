@@ -84,7 +84,7 @@ export function CenteredHero() {
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                Ratio App is an easy and secure way to track your finances and build healthy financial habits. Unlock the most valuable insights from your financial data so that you can make better financial decisions.
+                Ratio Money is an easy and secure way to track your finances and build healthy financial habits. Unlock the most valuable insights from your financial data so that you can make better financial decisions.
               </p>
               {/* Sign Up Form */}
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
@@ -208,7 +208,7 @@ export function CenteredHero() {
         setAlert({
           type: "success",
           message:
-            "Thank you for signing up. Check your mailbox for a confirmation mail from Ratio App. Check spam if you don't see it!",
+            "Thank you for signing up. Check your mailbox for a confirmation mail from Ratio Money. Check spam if you don't see it!",
         });
 
         // Analytics
@@ -219,7 +219,7 @@ export function CenteredHero() {
         setLoading(false)
         setAlert({
           type: "error",
-          message: "Your subscription is pending confirmation. Please check your inbox for a confirmation mail from Ratio App. Check your spam folder if necessary."
+          message: "Your subscription is pending confirmation. Please check your inbox for a confirmation mail from Ratio Money. Check your spam folder if necessary."
         })
       } else if (response.status === 422) {
         setLoading(false);

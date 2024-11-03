@@ -4,18 +4,18 @@ import { Container } from '@/components/Container';
 
 const faqs = [
     {
-        question: "What is Ratio App?",
+        question: "What is Ratio Money?",
         answer:
-            "Ratio App provides an easy and secure way to track the most important aspects of your finances and tools to unlock the most valuable insights, so that you can make healthy financial decisions.",
+            "Ratio Money provides an easy and secure way to track the most important aspects of your finances and tools to unlock the most valuable insights, so that you can make healthy financial decisions.",
     },
     {
         question: "Who can use it?",
-        answer: "Ratio App is available to anyone, anywhere in the world.",
+        answer: "Ratio Money is available to anyone, anywhere in the world.",
     },
     {
         question: "Where can I get it?",
         answer:
-            "Ratio App is currently only available on the App Store, you can drop your email in the form below to be notified when Andriod version is available.",
+            "Ratio Money is currently only available on the App Store, you can drop your email in the form below to be notified when Andriod version is available.",
     },
     {
         question: "How safe is my data?",
