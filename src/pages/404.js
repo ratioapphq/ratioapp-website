@@ -25,9 +25,8 @@ export default function NotFound() {
                 Go back home
               </span>
               </Link>
-              <Link href="/">
+              <Link href="/support">
               <span
-                href="mailto:hello@ratio.app"
                 className="inline-flex items-center rounded-md border border-transparent bg-green-100 px-4 py-2 text-sm font-medium text-green-700 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               >
                 Contact support

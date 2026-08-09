@@ -20,7 +20,7 @@ const faqs = [
     {
         question: "How safe is my data?",
         answer:
-            "Your financial data is private to you, stored securely on your device and backed up with encryption in the cloud so that you can recover the data on any other device for whatever reason. Read more about privacy and security https://ratio.app/privacy.",
+            "Your financial data is private to you. Read more about how Ratio Money handles information at https://www.ratiomoney.app/privacy.",
     },
 ];
 
@@ -42,7 +42,7 @@ export function FAQs() {
                     </h2>
                     <p className="mt-6 text-base leading-7 text-gray-600">
                         Have a different question and can’t find the answer you’re looking for? Reach out to our support team by{' '}
-                        <a href="mailto:hello@ratio.app" className="font-semibold text-green-600 hover:text-green-500">
+                        <a href="mailto:ratioapphq@gmail.com" className="font-semibold text-green-600 hover:text-green-500">
                             sending us an email
                         </a>{' '}
                         and we’ll get back to you as soon as we can.

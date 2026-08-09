@@ -9,6 +9,7 @@ import qrCode from '@/images/qr-code.svg'
 
 const navigation = {
   main: [
+    { name: 'Support', href: '/support' },
     { name: 'Blog', href: 'https://blog.ratio.app' },
     { name: 'Changelog', href: 'https://ratioapp.canny.io/changelog' },
     { name: 'Send feedback', href: 'https://ratioapp.canny.io/' },
@@ -92,7 +93,7 @@ export function Footer() {
                 <p className="mt-1 text-sm">Built healthier financial habits.</p>
               </div>
             </div>
-            <nav className="mt-11 flex gap-8">
+            <nav className="mt-11 flex flex-wrap gap-x-8">
             {navigation.main.map((item) => (
               <div key={item.name} className="pb-6">
                 <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
